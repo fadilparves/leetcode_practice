@@ -23,23 +23,23 @@
 
 class ExerciseNine:
     def isPalindrome(self, x: int) -> bool:
-        num = x # Save the 
-        if x < 0:
+        num = x # Save the original number 
+        if x < 0: # If the number is negative then return false
             return False
         
-        reversed_num = 0
-        while x != 0:
-            curr_digit = x % 10
+        reversed_num = 0 # Create a variable to store the reversed number
+        while x != 0: # While the number is not 0 
+            curr_digit = x % 10 # Get the last digit left from the original number
 
-            reversed_num = 10 * reversed_num
-            reversed_num = reversed_num + curr_digit
+            reversed_num = 10 * reversed_num # Divide the reversed number with 10
+            reversed_num = reversed_num + curr_digit # Add the current number that is the number obtained from the mod of 10 that returns the last digit from original number
 
-            x = x // 10
+            x = x // 10 # Remove the last number from the original digit, this repeats until the original number becomes 0
 
-        if reversed_num != x:
+        if reversed_num != num: # Check if the reversed number is not the same as original number, then return False
             return False
 
-        return True
+        return True # If all is correct then it will return True indicating that the number is Palindrome
 
 case1 = 121 # True is expected
 case2 = -121 # False is expected

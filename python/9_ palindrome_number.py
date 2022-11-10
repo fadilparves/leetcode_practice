@@ -17,6 +17,42 @@
     Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
     Constraints:
-    
+
     -231 <= x <= 231 - 1
     """
+
+class ExerciseNine:
+    def isPalindrome(self, x: int) -> bool:
+        num = x # Save the 
+        if x < 0:
+            return False
+        
+        reversed_num = 0
+        while x != 0:
+            curr_digit = x % 10
+
+            reversed_num = 10 * reversed_num
+            reversed_num = reversed_num + curr_digit
+
+            x = x // 10
+
+        if reversed_num != x:
+            return False
+
+        return True
+
+case1 = 121 # True is expected
+case2 = -121 # False is expected
+case3 = 10 # False is expected
+case4 = -10 # False is expected
+case5 = 55 # True is expected
+
+Enine = ExerciseNine()
+out1 = Enine.isPalindrome(case1)
+out2 = Enine.isPalindrome(case2)
+out3 = Enine.isPalindrome(case3)
+out4 = Enine.isPalindrome(case4)
+out5 = Enine.isPalindrome(case5)
+
+print(out1, out2, out3, out4, out5)
+

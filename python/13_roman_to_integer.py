@@ -46,3 +46,31 @@
 
 """
 
+class ExerciseThirteen:
+    def romanToInt(self, s: str) -> int:
+        # Create dict that can be used to map the roman alphabet with its integer
+        mapper = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+
+        # Declare num variable with default value as the last alphabet integer from the roman number
+        num = mapper[s[-1]]
+
+        # Define the slow and fast pointer
+        left, right = len(s) - 2, len(s) - 1
+
+        # While we havent got to the end of fast pointer
+        while left >= 0:
+            # Get the integer for the slow and fast pointer from the mapper
+            left_num = mapper[s[left]]
+            right_num = mapper[s[right]]
+
+            # If the left number is smaller than right number then we want to substract the left number from the num
+            if left_num < right_num:
+                num -= left_num
+            else:
+                num += left_num
+            
+            # Then we move the slow and fast pointer by one back
+            left -= 1
+            right -= 1
+
+    return num

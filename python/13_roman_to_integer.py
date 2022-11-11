@@ -73,4 +73,15 @@ class ExerciseThirteen:
             left -= 1
             right -= 1
 
-    return num
+        return num
+
+case1 = "III" # Expected is 3
+case2 = "LVIII" # Expected is 58
+case3 = "MCMXCIV" # Expected is 1994
+
+E13 = ExerciseThirteen()
+out1 = E13.romanToInt(case1)
+out2 = E13.romanToInt(case2)
+out3 = E13.romanToInt(case3)
+
+print(out1, out2, out3) #3, 58, 1994

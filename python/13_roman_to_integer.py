@@ -1,5 +1,5 @@
 """
-    Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+    Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. (Difficulty: Easy)
 
     Symbol       Value
     I             1
@@ -46,6 +46,8 @@
 
 """
 
+# Answer 1: Slower
+
 class ExerciseThirteen:
     def romanToInt(self, s: str) -> int:
         # Create dict that can be used to map the roman alphabet with its integer
@@ -83,5 +85,25 @@ E13 = ExerciseThirteen()
 out1 = E13.romanToInt(case1)
 out2 = E13.romanToInt(case2)
 out3 = E13.romanToInt(case3)
+
+print(out1, out2, out3) #3, 58, 1994
+
+# Faster solution
+class ExerciseThirteenFast:
+    def romanToInt(self, s: str) -> int:
+        mapper = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        num = 0
+        for i in range(len(s)-1, 0, -1):
+            if mapper[s[i-1]] < mapper[s[i]]:
+                num -= mapper[s[i-1]]
+            else:
+                num += mapper[s[i-1]]
+            
+        return num + mapper[s[-1]]
+
+E13F = ExerciseThirteenFast()
+out1 = E13F.romanToInt(case1)
+out2 = E13F.romanToInt(case2)
+out3 = E13F.romanToInt(case3)
 
 print(out1, out2, out3) #3, 58, 1994

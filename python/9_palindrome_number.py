@@ -1,6 +1,8 @@
 """ Given an integer x, return true if x is a palindrome and false otherwise. 
     palindrome -> An integer is a palindrome when it reads the same forward and backward. For example, 121 is a palindrome while 123 is not.
-    
+    (Difficulty: Easy)
+
+
     Example:
     Input: x = 121
     Output: true

@@ -81,3 +81,9 @@ class ExerciseThirteeFive:
         
         return start
 
+case1, target1 = [1,3,5,6], 5 # Output has to be 2
+case2, target2 = [1,3,5,6], 2 # Output has to be 1
+case3, target3 = [-2,-1,0,1,3,5,6], -1 # Output has to be 1
+case4, target4 = [0], 5 # Output has to be 1
+case5, target5 = [1,3,5,7,9], 9 # Output has to be 4
+

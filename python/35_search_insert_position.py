@@ -87,3 +87,11 @@ case3, target3 = [-2,-1,0,1,3,5,6], -1 # Output has to be 1
 case4, target4 = [0], 5 # Output has to be 1
 case5, target5 = [1,3,5,7,9], 9 # Output has to be 4
 
+E35 = ExerciseThirteeFive()
+out1 = E35.searchInsert(case1, target1)
+out2 = E35.searchInsert(case2, target2)
+out3 = E35.searchInsert(case3, target3)
+out4 = E35.searchInsert(case4, target4)
+out5 = E35.searchInsert(case5, target5)
+
+print(out1, out2, out3, out4, out5)

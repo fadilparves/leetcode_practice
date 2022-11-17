@@ -62,3 +62,20 @@ Time Complexity: O(log n)
 Space Complexity: O(1)
 
 """
+
+class ExerciseSixtyNine:
+    def mySqrt(self, x: int) -> int:
+        nums = range(0, x + 1)
+        start, end = 0, len(nums) - 1
+        while start <= end:
+            mid = (start + end) // 2
+            
+            if nums[mid] * nums[mid] == x:
+                return nums[mid]
+            elif nums[mid] * nums[mid] > x:
+                end = mid - 1
+            else:
+                start = mid + 1
+        
+        return nums[start] - 1
+

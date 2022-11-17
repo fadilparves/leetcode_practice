@@ -79,3 +79,11 @@ class ExerciseSixtyNine:
         
         return nums[start] - 1
 
+case1 = 4 # Answer is 2
+case2 = 8 # Answer is 2
+case3 = 150 # Answer is 12
+case4 = 0 # Answer is 0
+case5 = 12632173 # Answer is 3554
+
+E69 = ExerciseSixtyNine()
+

@@ -94,4 +94,4 @@ out3 = E35.searchInsert(case3, target3)
 out4 = E35.searchInsert(case4, target4)
 out5 = E35.searchInsert(case5, target5)
 
-print(out1, out2, out3, out4, out5)
+print(out1, out2, out3, out4, out5) # 2, 1, 1, 1, 4

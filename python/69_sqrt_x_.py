@@ -86,4 +86,10 @@ case4 = 0 # Answer is 0
 case5 = 12632173 # Answer is 3554
 
 E69 = ExerciseSixtyNine()
+out1 = E69.mySqrt(case1)
+out2 = E69.mySqrt(case2)
+out3 = E69.mySqrt(case3)
+out4 = E69.mySqrt(case4)
+out5 = E69.mySqrt(case5)
 
+print(out1, out2, out3, out4, out5) # 2, 2, 12, 0, 3554

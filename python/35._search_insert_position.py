@@ -66,3 +66,18 @@ Time Complexity: O(log n) -> Time of run will increase as the number of input in
 Space Complexity: O(1) -> Constant space complexity as the only space taken is the start and end and mid_index variable
 
 """
+
+class ExerciseThirteeFive:
+    def searchInsert(self, nums: list[int], target: int) -> int:
+        start, end = 0, len(nums) - 1
+        while start <= end:
+            mid_index = (start + end) // 2
+            if nums[mid_index] == target:
+                return mid_index
+            elif nums[mid_index] > target:
+                end = mid_index - 1
+            else:
+                start = mid_index + 1
+        
+        return start
+

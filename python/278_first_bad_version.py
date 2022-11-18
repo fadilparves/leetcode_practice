@@ -83,4 +83,4 @@ out2 = E278.firstBadVersion(case2, target2)
 out3 = E278.firstBadVersion(case3, target3)
 out4 = E278.firstBadVersion(case4, target4)
 
-print(out1, out2, out3, out4)
+print(out1, out2, out3, out4) #4, 1, 10, 2765

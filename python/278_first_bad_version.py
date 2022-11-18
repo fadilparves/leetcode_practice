@@ -58,16 +58,29 @@ Space Complexity: O(1)
 """
 
 class ExerciseTwoHundredSeventyEight:
-    def firstBadVersion(self, n: int) -> int:
+    def firstBadVersion(self, n: int, t: int) -> int:
         nums = range(1, n + 1)
         start, end = 0, len(nums) - 1
 
         while start <= end:
             middle_index = (start + end) // 2
 
-            if isBadVersion(nums[middle_index]) == True:
+            if nums[middle_index] >= t:
                 end = middle_index - 1
             else:
                 start = middle_index + 1
         
         return nums[start]
+
+case1, target1 = 5, 4
+case2, target2 = 1, 1
+case3, target3 = 10, 10
+case4, target4 = 1798722, 2765
+
+E278 = ExerciseTwoHundredSeventyEight()
+out1 = E278.firstBadVersion(case1, target1)
+out2 = E278.firstBadVersion(case2, target2)
+out3 = E278.firstBadVersion(case3, target3)
+out4 = E278.firstBadVersion(case4, target4)
+
+print(out1, out2, out3, out4)

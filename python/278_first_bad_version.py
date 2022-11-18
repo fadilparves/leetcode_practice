@@ -1,5 +1,4 @@
 """
-
 You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
@@ -57,3 +56,18 @@ Time Complexity: O(log n)
 Space Complexity: O(1)
 
 """
+
+class ExerciseTwoHundredSeventyEight:
+    def firstBadVersion(self, n: int) -> int:
+        nums = range(1, n + 1)
+        start, end = 0, len(nums) - 1
+
+        while start <= end:
+            middle_index = (start + end) // 2
+
+            if isBadVersion(nums[middle_index]) == True:
+                end = middle_index - 1
+            else:
+                start = middle_index + 1
+        
+        return nums[start]

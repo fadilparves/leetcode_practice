@@ -62,7 +62,7 @@ out3 = E350.intersect(c_3_nums1, c_3_nums2)
 out4 = E350.intersect(c_4_nums1, c_4_nums2)
 out5 = E350.intersect(c_5_nums1, c_5_nums2)
 
-print(out1, out2, out3, out4, out5) # [2, 2] [4, 9] [] [1, 1, 4, 4, 4] [1]
+print(out1, out2, out3, out4, out5) # [2, 2] [4, 9] [] [1, 1, 4, 4, 4] [1]g
 
 
 # Q1: What if the given array is already sorted? How would you optimize your algorithm?
